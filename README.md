@@ -1,6 +1,8 @@
 # Recognizing incidents and their sentiment in short texts
 Agata Kaczmarek
 
+## Structure of the repository
+* `notebooks` - directory containg notebooks and files that are more tidy than `work_in_progress` :)
 
 ## Current plan and setup
 
