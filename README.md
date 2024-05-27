@@ -25,11 +25,11 @@ For sentiment analysis three models are being compared: BERT, RoBERTa and graph 
 
 ## Current results for topic modeling 
 
-Diversity parameter: 0.5, coherence metric: c_npmi, TopicDiversity: 0.7886792452830189, mean diversity in topics: 1.0, coherence score: 0.034461948245713726.
+Diversity parameter: 0.5, coherence metric: c_npmi, TopicDiversity: 0.7886792452830189, mean diversity in topics: 1.0, coherence score: 0.034461948245713726, KL background: 2.534053223796575, KL vacuous: 2.4354541148173947.
 
-Diversity parameter: 0.2, coherence metric: c_npmi, TopicDiversity: 0.7061320754716981, mean diversity in topics: 0.900128644939967, coherence score: 0.09791122425972787.
+Diversity parameter: 0.2, coherence metric: c_npmi, TopicDiversity: 0.7061320754716981, mean diversity in topics: 0.9001286449399674, coherence score: 0.09791122425972787, KL background: 2.534053223796575, KL vacuous: 2.3216755782442813.
 
-Diversity parameter: 0.05, coherence metric: c_npmi, TopicDiversity: 0.680188679245283, mean diversity in topics: 0.8406534503232627, coherence score: 0.11335504226096892.
+Diversity parameter: 0.05, coherence metric: c_npmi, TopicDiversity: 0.680188679245283, mean diversity in topics: 0.8406534503232632, coherence score: 0.11335504226096892, KL background: 2.534053223796575, KL vacuous: 2.3040921834697.
 
 Sample topic:
 
