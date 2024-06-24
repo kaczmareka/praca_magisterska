@@ -12,7 +12,7 @@ To recognize incidents the topic modeling model BERTopic is used. Performance is
 
 * Coherence metrics - measure how the top-k words in the topic relate to each other
 * Significance metrics - aim at discovering high-quality and junk topics based on document-topic and topic-word distributions
-* Diversity metrics - measure diverity of words in topics
+* Diversity metrics - measure diversity of words in topics
 
 For sentiment analysis three models are being compared: BERT, RoBERTa and graph based solution. The metric to compare them is balanced accuracy, measured on dataset similar to ACTAWARE (https://www.kaggle.com/datasets/hoshi7/news-sentiment-dataset).
 
