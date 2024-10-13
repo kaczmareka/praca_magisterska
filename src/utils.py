@@ -12,15 +12,35 @@ from src.config import(
   PATH_HUMAN
 )
 
-# evaluation functions
 def evaluate_category(data, category_predicted):
+  """
+  Compute balanced accuracy on predicted categories.
+
+  Args:
+    data (pd.DataFrame): ground truth
+    category_predicted (list): predicted categories for articles
+  """
   return balanced_accuracy_score(data['Category'], category_predicted)
 
 def evaluate_sentiment(data, sentiment_final):
+  """
+  Compute balanced accuracy on predicted sentiment.
+
+  Args:
+    data (pd.DataFrame): ground truth
+    sentiment_final (list): predicted sentiment for articles
+  """
   return balanced_accuracy_score(data['Sentiment'], sentiment_final)
 
 
 def evaluate_incident(data, incident_prediction):
+  """
+  Compute metric on predicted incidents.
+
+  Args:
+    data (pd.DataFrame): ground truth
+    incident_prediction (list): predicted incidents for articles
+  """
   # Load a pretrained Sentence Transformer model
   model = SentenceTransformer('multi-qa-mpnet-base-dot-v1', similarity_fn_name=SimilarityFunction.COSINE)
 
@@ -37,6 +57,12 @@ def evaluate_incident(data, incident_prediction):
   return similarities_for_articles, sum(similarities_for_articles)/len(similarities_for_articles)
 
 def load_data_preprocessed(name):
+  """
+  Load one of the preprocessed datasets.
+
+  Args: 
+    name (str): name of the dataset which shuld be loaded.
+  """
   df_gt=pd.read_csv(PATH_GT_DATA, sep=';')
 
   if name=="not_preprocessed_data":
@@ -55,8 +81,13 @@ def load_data_preprocessed(name):
     raise ValueError("Wrong dataset name")
   return df_gt, data_df
 
-#merge answers
 def get_final_sentiment(articles):
+  """
+  Get final sentiment for ensemble model (RoBERTa and graph-based) for given articles.
+
+  Args:
+    articles (list): list of articles which should be analysed.
+  """
   sentiment_roberta=run_roberta_sentiment(articles)
   sentiment_graph=run_actaware_preprocessed(articles)
   sentiment_final=[sentiment_graph[i] if sentiment_graph[i]==sentiment_roberta[i] else 'neutral' for i in range(len(sentiment_graph))]

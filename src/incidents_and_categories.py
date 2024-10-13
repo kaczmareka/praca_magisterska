@@ -1,17 +1,16 @@
-# incidents and categories
-# from openai import OpenAI
-# import json
-# import pandas as pd
 import numpy as np
-# from sklearn.metrics import balanced_accuracy_score
-# from sentence_transformers import SentenceTransformer, SimilarityFunction
-# from sklearn.metrics.pairwise import cosine_similarity
 
-#incidents and categories functions
 def get_category_from_gpt(articles, client):
+  """
+  Uses OpenAI API to get an answer to prepared prompt for text classification, given articles.
+  Returns both answers and confidence of answers.
+  Args:
+    articles (list): list of articles, which will be classified by GPT model
+    client: openai client instance
+  """
+
   answers=["" for _ in range(len(articles))]
   answers_confidence=["" for _ in range(len(articles))]
-#   sum_time=0
   for i in range(len(articles)):
     prompt =f"""You are a text classification endpoint, classifying given text into categories:
     human_employee_rights
@@ -45,9 +44,17 @@ def get_category_from_gpt(articles, client):
   return answers, answers_confidence
 
 def get_incident_from_gpt(articles, client):
+  """
+  Uses OpenAI API to get an answer to prepared prompt for incident recognition, given articles.
+  Returns both answers and confidence of answers.
+
+  Args:
+    articles (list): list of articles, which will be interpreted by GPT model
+    client: openai client instance
+  """
+
   answers=["" for _ in range(len(articles))]
   answers_confidence=["" for _ in range(len(articles))]
-#   sum_time=0
   for i in range(len(articles)):
     prompt =f"""You are an incident recognition endpoint, for each given text return incident. Your answer cannot be longer than 3 words.
 

@@ -1,16 +1,20 @@
-# data preprocessing
 import json
 import pandas as pd
-# import numpy as np
 import emoji
 import copy
 from src.config import (
   PATH_ORIGINAL_DATA
 )
 
-#load original data
-
 def load_original_data(path_to_data=PATH_ORIGINAL_DATA, first_rows=100):
+  """
+  Loads the not preprocessed dataset from Actaware Inc. from given path. 
+  User can provide how many first rows which will be loaded, so that the pipeline runs faster.
+
+  Args:
+    path_to_data (str): path to not preprocessed dataset from Actaware Inc., default: PATH_ORIGINAL_DATA
+    first_rows (int): how many of first rows will be loaded, default: 100.
+  """
   with open(path_to_data) as json_file:
     data = json.load(json_file)
   data_df = pd.DataFrame(data)[:first_rows]
@@ -21,7 +25,7 @@ def load_original_data(path_to_data=PATH_ORIGINAL_DATA, first_rows=100):
   data_df_small_all=data_df_small_all.drop(['Title'], axis=1)
 
   #regex cleaning
-  #replace weird parts of ContentRaw with ''
+  #replace artefacts in ContentRaw with ''
   to_replace1='Get the free Morning Headlines email for news from our reporters across the world'
   to_replace2='Sign up to our free Morning Headlines'
   to_replace3='email Please enter a valid email address Please enter a valid email address SIGN UP'
@@ -33,7 +37,7 @@ def load_original_data(path_to_data=PATH_ORIGINAL_DATA, first_rows=100):
   to_replace9='{{ /verifyErrors }}'
   to_replace10='{{ ^verifyErrors }}'
   to_replace11='Something went wrong. Please try again later'
-  to_replace12=r'Advertisement !- - ad:.*?- -> ' #data_df_small_all
+  to_replace12=r'Advertisement !- - ad:.*?- -> '
   to_replace13=r'<!- - ad:.*?- ->'
   to_replace14=r'<a href=.*?</a>'
   to_replace15=r'http.*? '

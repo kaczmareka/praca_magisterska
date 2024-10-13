@@ -1,16 +1,15 @@
-#sentiment-roberta
-# import pandas as pd
-# from sklearn.metrics import balanced_accuracy_score
-# import numpy as np
 import torch
-# import time
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
-# from sklearn.model_selection import train_test_split
 import warnings
 warnings.filterwarnings('ignore')
 
-#roberta
 def run_roberta_sentiment(articles):
+  """
+  Run RoBERTa model on given articles.
+
+  Args:
+    articles (list): list of articles on which the sentiment should be analysed.
+  """
   answers=[" " for _ in range(len(articles))]
   model_name="textattack/roberta-base-SST-2"
   model = AutoModelForSequenceClassification.from_pretrained(model_name)
