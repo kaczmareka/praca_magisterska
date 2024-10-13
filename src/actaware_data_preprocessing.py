@@ -4,7 +4,7 @@ import pandas as pd
 # import numpy as np
 import emoji
 import copy
-from config import (
+from src.config import (
   PATH_ORIGINAL_DATA
 )
 

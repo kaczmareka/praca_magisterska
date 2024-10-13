@@ -1,10 +1,10 @@
 from sklearn.metrics import balanced_accuracy_score
 from sentence_transformers import SentenceTransformer, SimilarityFunction
 import pandas as pd
-from sentiment_roberta import run_roberta_sentiment
-from sentiment_graph_based import run_actaware_preprocessed
+from src.sentiment_roberta import run_roberta_sentiment
+from src.sentiment_graph_based import run_actaware_preprocessed
 
-from config import(
+from src.config import(
   PATH_GT_DATA,
   PATH_NOT_PREPROCESSED,
   PATH_4O,
