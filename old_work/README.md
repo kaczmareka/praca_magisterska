@@ -1,8 +1,3 @@
-pip install -r requirements.txt
-tylko tam jeszcze dodac te jupyterowe rzeczy
-
-
-
 # Recognizing incidents and their sentiment in short texts
 Agata Kaczmarek
 
