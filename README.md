@@ -1,6 +1,7 @@
 How to run:
 
-```conda create -n env_actaware python=3.10.12
+```
+conda create -n env_actaware python=3.10.12
 conda activate env_actaware
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
