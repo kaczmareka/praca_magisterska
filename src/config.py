@@ -6,3 +6,5 @@ PATH_NOT_PREPROCESSED="data/chosen_articles.txt"
 PATH_4O="data/chosen_articles_cleaned_4o.txt"
 PATH_REGEX="data/chosen_articles_cleaned_regex.txt"
 PATH_HUMAN="data/chosen_articles_cleaned_by_me.txt"
+
+PATH_TO_SAVE_PREPROCESSED="data/"
