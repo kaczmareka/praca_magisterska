@@ -23,3 +23,13 @@ The notebooks present in this directory were used to conduct experiments describ
     * *Content:* all experiments conducted with the use of GPT-3.5-turbo and GPT-4o-mini models.
     * *Input:* To run it, the following files are neccessary: `data/articles_categories_their_matched_companies.csv`, `data/chosen_articles.txt`, `data/chosen_articles_cleaned_4o.txt`, `data/chosen_articles_cleaned_regex.txt`, `data/chosen_articles_cleaned_by_me.txt`.
     * *Output:* results for all experiments have to be analyzed manually, however, they are saved in files in directory `results`.
+
+* `count_scores_for_sentiment_category.ipynb`
+    * *Content:* computing scores for all experiments achieved with the use of GPT-3.5-turbo and GPT-4o-mini models.
+    * *Input:* To run it, the results of the experiments are needed, saved properly.
+    * *Output:* results for all experiments have to be analyzed manually, however, they are saved in files in directory `results`.
+
+* `sentiment_graph_based_with_experiments.ipynb`
+    * *Content:* notebook with implementation and experiments using graph-based solution.
+    * *Input:* To run all steps in it, twitter sentiment extraction, news sentiment and all subsets of Actaware Inc. are needed.
+    * *Output:* results for all experiments have to be analyzed manually, however, they are saved in files in directory `results`.
