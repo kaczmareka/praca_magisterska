@@ -33,3 +33,13 @@ The notebooks present in this directory were used to conduct experiments describ
     * *Content:* notebook with implementation and experiments using graph-based solution.
     * *Input:* To run all steps in it, twitter sentiment extraction, news sentiment and all subsets of Actaware Inc. are needed.
     * *Output:* results for all experiments have to be analyzed manually, however, they are saved in files in directory `results`.
+
+* `bertopic_final_experiments.ipynb`
+    * *Content:* notebook with model and metrics, measuing the final scores.
+    * *Input:* To run this notebook, access to good computational resources are recommended, including GPU. Also, file `list_of_contents.txt` or similar is needed.
+    * *Output:* results for all experiments have to be analyzed manually.
+
+* `bert_roberta_ensembles_sentiment.ipynb`
+    * *Content:* notebook with BERT, RoBERTa and ensembles, with evaluation.
+    * *Input:* To run this notebook, access to good computational resources are recommended, including GPU. Also, results from graph-based solution are needed for the ensemble part.
+    * *Output:* results for all experiments have to be analyzed manually, some of them are saved in specified directory.
