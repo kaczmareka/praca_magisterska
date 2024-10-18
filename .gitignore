@@ -1,0 +1,7 @@
+data/Articles_2023.json
+data/data_df_small_no_emoji_without_http.csv
+data/gpt_4o_incidents.csv
+data/list_of_contents_new.txt
+notebooks_with_experiments/__pycache__/*
+notebooks_with_experiments/results/*
+src/__pycache__/*

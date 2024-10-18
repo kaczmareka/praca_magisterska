@@ -1,6 +1,6 @@
 # Notebooks used to conduct experiments
 
-The notebooks present in this directory were used to conduct experiments described in the thesis. To run each of them the environment `env_actaware` is needed. Additionally, for some of them exist other requirements listed below. Some of the files needed to run some of the notebooks are created in other notebooks -- all details are described below. For notebooks using not only Actaware Inc. dataset, but also other, the data has to be separately downloaded.
+The notebooks present in this directory were used to conduct experiments described in the thesis. To run each of them the environment `env_actaware` is needed. Additionally, for some of them exist other requirements listed below or in `requirements.txt` file in this directory. Some of the files needed GPU, therefore were run sepatarely on GoogleColab. Some of the notebooks require additional datasets or files.
 
 ## Notebooks
 * `actaware_data_preprocessing.ipynb`
@@ -43,3 +43,8 @@ The notebooks present in this directory were used to conduct experiments describ
     * *Content:* notebook with BERT, RoBERTa and ensembles, with evaluation.
     * *Input:* To run this notebook, access to good computational resources are recommended, including GPU. Also, results from graph-based solution are needed for the ensemble part.
     * *Output:* results for all experiments have to be analyzed manually, some of them are saved in specified directory.
+
+* `KeyBERT_with_keywords_scores.ipynb`
+    * *Content:* notebook with  KeyBERT experiments with evaluation.
+    * *Input:* To run this notebook, access to good computational resources are recommended, including GPU. Also, all versions of subsets need to be stored in predefined directory.
+    * *Output:* results for all experiments have to be analyzed manually.

@@ -2,3 +2,4 @@ langdetect==1.0.9
 bertopic==0.16.2
 octis==1.13.1
 evaluate==0.4.3
+keybert==0.8.5
