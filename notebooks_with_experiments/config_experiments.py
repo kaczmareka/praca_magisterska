@@ -1,4 +1,4 @@
-OPEN_AI_KEY="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"
+OPEN_AI_KEY=OPEN_AI_KEY
 
 PATH_ORIGINAL_DATA="../data/Articles_2023.json"
 PATH_GT_DATA="../data/articles_categories_their_matched_companies.csv"
